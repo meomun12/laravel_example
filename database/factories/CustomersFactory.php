@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ */
+class CustomersFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition()
+    {
+        return [
+            'CustomerName'=>$this->faker->CustomerName(),
+            'Address'=>$this->faker->Address(),
+            'City'=>$this->faker->City(),
+            'PostalCode'=>$this->faker->PostalCode(),
+            'Country'=>$this->faker->Country(),
+        ];
+    }
+}
